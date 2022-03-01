@@ -11,21 +11,24 @@ import CollectionsList from '@components/CreatorView/CollectionsView/Collections
 export async function getServerSideProps() {
 
 
-const serverAddress = 'localhost'
-const serverPort = 4000
-    // Fetch data from external API
-    let response = await Axios.get(`http://${serverAddress}:${serverPort}/verifyUser`)
-    
-    console.log(response)
-    // Pass data to the page via props
-    return { props: { response } }
-  }
+  const serverAddress = 'localhost'
+  const serverPort = 4000
+  // Fetch data from external API
+  let response = await Axios.get(`http://${serverAddress}:${serverPort}/verifyUser`)
+
+  console.log("response is", response)
+  // Pass data to the page via props
+  return { props: { response }, }
+}
 
 
 const VerifyUser = () => {
+
   return (
-   <h1>verifying</h1>
+
+    <h1>Verify</h1>
+
   )
 }
 
-export default VerifyUser 
+export default VerifyUser
