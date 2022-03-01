@@ -19,13 +19,15 @@ interface RouterProps {
     const router =useRouter()
     const [loading, setLoading] = useState<boolean>(false);
     const [message, setMessage] = useState<string>("");
-  
+
+
+
     const initialValues: {
       username: string;
       password: string;
     } = {
-      username: "",
-      password: "",
+      username: "Hello",
+      password: "Blake",
     };
   
     const validationSchema = Yup.object().shape({
