@@ -43,7 +43,7 @@ interface RouterProps {
   
       login(username, password).then(
         () => {
-          history.push("/profile");
+          history.push("/instructor_view");
           window.location.reload();
         },
         (error) => {

@@ -4,18 +4,21 @@ import axios from "axios";
 const serverAddress = 'localhost'
 const serverPort = 4000
 
-const API_URL = "http://localhost:8080/api/auth/";
-export const register = (username: string, email: string, password: string) => {
-    return axios.post(API_URL + "signup", {
-      username,
-      email,
-      password,
-    });
-  };
+//const API_URL = "http://localhost:8080/api/auth/";
+
+const API_URL = `http://${serverAddress}:${serverPort}`
+
+// export const register = (username: string, email: string, password: string) => {
+//     return axios.post(API_URL + "signup", {
+//       username,
+//       email,
+//       password,
+//     });
+//   };
   
   export const login = (username: string, password: string) => {
     return axios
-      .post(API_URL + "signin", {
+      .post(API_URL + "verifyUser", {
         username,
         password,
       })

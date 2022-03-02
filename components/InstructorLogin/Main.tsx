@@ -2,9 +2,9 @@ import styles from './Main.module.scss'
 import { useRouter } from 'next/router'
 import React,{FC, InputHTMLAttributes} from 'react';
 
-import VerifyUser from 'pages/instructor_login/verification/index';
+import {verify} from 'pages/instructor_login/verification/index';
 
-
+import Axios, { AxiosResponse } from 'axios'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
     name:string;
@@ -23,12 +23,28 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
 
 
 
+export async function getServerSideProps() {
 
-const Main:FC<InputProps> = ({name,label,...rest}) => 
+
+  const serverAddress = 'localhost'
+  const serverPort = 4000
+  // Fetch data from external API
+  let response = await Axios.get(`http://${serverAddress}:${serverPort}/verifyUser`,{ params: { answer: 42 } })
+
+  const data = response
+  // Pass data to the page via props
+  return { props: { data }, }
+}
+
+
+
+const Main:FC<InputProps> = ({name,label,...rest},{data}) => 
 { const router = useRouter()
 
   return (
+    
     <main id={styles.container}>
+      <p>{data}</p>
       <h1>Instructor Login</h1>
       <div className={styles.input}>
       <label htmlFor={name}> Email:{label}</label>
@@ -42,10 +58,12 @@ const Main:FC<InputProps> = ({name,label,...rest}) =>
       <br></br>
       <br></br>
       <br></br>
-      <VerifyUser/>
-      <button type="button" className ={styles.button}onClick={() => {router.push('/instructor_view')}}>
-      Submit
-    </button>
+      
+        <button type="button" className ={styles.button}onClick={() => {router.push('/instructor_view')}}>
+        Submit
+      </button>
+
+      
 
 
       </div>

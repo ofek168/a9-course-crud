@@ -14,21 +14,24 @@ export async function getServerSideProps() {
   const serverAddress = 'localhost'
   const serverPort = 4000
   // Fetch data from external API
-  let response = await Axios.get(`http://${serverAddress}:${serverPort}/verifyUser`)
+  let response = await Axios.get(`http://${serverAddress}:${serverPort}/verifyUser`,{ params: { answer: 42 } })
 
-  console.log("response is", response)
+  const data = response
   // Pass data to the page via props
-  return { props: { response }, }
+  return { props: { data}, }
 }
 
 
-const VerifyUser = () => {
+// const VerifyUser = () => {
 
-  return (
+//   return (
 
-    <h1>Verify</h1>
+//     <h1>Verify</h1>
 
-  )
+//   )
+function VerifyUser({props}){
+
 }
+
 
 export default VerifyUser

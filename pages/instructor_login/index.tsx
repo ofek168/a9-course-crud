@@ -3,7 +3,7 @@ import Main from '@components/InstructorLogin/Main'
 
 const InstructorLogin = () => {
   return (
-    <Login />
+    <Main />
   )
 }
 
