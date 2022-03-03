@@ -1,5 +1,5 @@
 import styles from './Main.module.scss'
-import { useRouter } from 'next/router'
+import router, { useRouter } from 'next/router'
 import React,{FC, InputHTMLAttributes} from 'react';
 
 import {verify} from 'pages/instructor_login/verification/index';
@@ -29,11 +29,20 @@ export async function getServerSideProps() {
   const serverAddress = 'localhost'
   const serverPort = 4000
   // Fetch data from external API
-  let response = await Axios.get(`http://${serverAddress}:${serverPort}/verifyUser`,{ params: { answer: 42 } })
+  let response = await Axios.get(`http://${serverAddress}:${serverPort}/verifyUser`)
+  const data = response.data
+  console.log(data)
+  // if(data.accessToken){
+  //   const accessTokenClaims = data.accessToken
+  //   console.log(accessTokenClaims[`${response}/user`])
+  // }
 
-  const data = response
+  if(data){
+   router.push('/instructor_view')
+  }
   // Pass data to the page via props
-  return { props: { data }, }
+  return data;  // returns true 
+  // return { props: { data }, }
 }
 
 
@@ -64,7 +73,9 @@ const Main:FC<InputProps> = ({name,label,...rest},{data}) =>
       </button>
 
       
-
+      <button onClick={() => {getServerSideProps()}}>
+       Submission
+      </button>
 
       </div>
     </main>
