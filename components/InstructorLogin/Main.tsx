@@ -2,8 +2,6 @@ import styles from './Main.module.scss'
 import router, { useRouter } from 'next/router'
 import React,{FC, InputHTMLAttributes} from 'react';
 
-import {verify} from 'pages/instructor_login/verification/index';
-
 import Axios, { AxiosResponse } from 'axios'
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
@@ -30,19 +28,23 @@ export async function getServerSideProps() {
   const serverPort = 4000
   // Fetch data from external API
   let response = await Axios.get(`http://${serverAddress}:${serverPort}/verifyUser`)
+  let gettoken = await Axios.get(`http://${serverAddress}:${serverPort}/getUsertoken`)
+  const token = gettoken.data
+  console.log(token)
   const data = response.data
   console.log(data)
-  // if(data.accessToken){
-  //   const accessTokenClaims = data.accessToken
-  //   console.log(accessTokenClaims[`${response}/user`])
-  // }
 
   if(data){
+    // let gettoken = await Axios.get(`http://${serverAddress}:${serverPort}/getUsertoken`)
+    // const token = gettoken.data
+    
    router.push('/instructor_view')
   }
-  // Pass data to the page via props
+
+
+
   return data;  // returns true 
-  // return { props: { data }, }
+
 }
 
 

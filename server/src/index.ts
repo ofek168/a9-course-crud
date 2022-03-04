@@ -20,6 +20,14 @@ var app: express.Express
 var upload: multer.Multer
 var conn: r.Connection
 
+// for web token
+// var jwt = require('express-jwt');
+
+
+
+
+
+
 // only because items are stored in DB as string[] and not IVocab[]
 interface ICollectionAlt {
     readonly id: string;
@@ -132,12 +140,25 @@ async function setup_rdb(dbAddress: string, dbPort: number) {
     })
 }
 
+
+var jwt = require('jsonwebtoken');
+var token = jwt.sign({ foo: 'RobertBlake' }, '1234456');
+
+
 function user_callbacks() {
     app.get('/verifyUser', async (req, res) => {
         // TODO verify user data
         res.send(true)
-    })
+    });
+    app.get('/getUsertoken', async (req, res) => {
+        res.send(token) // got the token. 
+    });
 }
+
+
+
+
+
 
 function admin_callbacks() {
     app.get('/status', async(req, res) => {
