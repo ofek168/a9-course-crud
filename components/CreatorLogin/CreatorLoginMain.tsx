@@ -1,4 +1,4 @@
-import styles from './Main.module.scss'
+import styles from './CreatorLogin.module.scss'
 import router, { useRouter } from 'next/router'
 import React, { FC, InputHTMLAttributes } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
@@ -16,14 +16,14 @@ export async function getServerSideProps() {
   // Fetch data from external API
   // let response = await Axios.get(`http://${serverAddress}:${serverPort}/verifyUser`)
 
-  let header = await Axios.get(`http://${serverAddress}:${serverPort}/instructorauth`)
+  let header = await Axios.get(`http://${serverAddress}:${serverPort}/creatorauth`)
 
   const payload = header.data
   const userToken = payload.token
   //this works, returns the payload
   if (userToken) {
     // router.push("/instructor_view")
-    localStorage.setItem("instructoruser", JSON.stringify(payload)); // you can change this later nick, for rethinkdb
+    localStorage.setItem("creatoruser", JSON.stringify(payload)); // you can change this later nick, for rethinkdb
   }
   return payload;  // returns true 
 
@@ -31,7 +31,7 @@ export async function getServerSideProps() {
 
 // This is just one other way 
 export const getCurrentUser = () => {
-  const userStr = localStorage.getItem("instructoruser"); // same as here you can change this later nick, for rethinkdb
+  const userStr = localStorage.getItem("creatoruser"); // same as here you can change this later nick, for rethinkdb
   if (userStr) {
     console.log(JSON.parse(userStr)) // for showing the token part. 
     return JSON.parse(userStr);
@@ -40,14 +40,13 @@ export const getCurrentUser = () => {
 };
 
 
-const Main: FC<InputProps> = ({ name, label, ...rest }) => {
+const CreatorLoginMain: FC<InputProps> = ({ name, label, ...rest }) => {
   const router = useRouter()
-
   return (
 
     <main id={styles.container}>
 
-      <h1>Instructor Login</h1>
+      <h1>Creator Login</h1>
       <div className={styles.input}>
         <label htmlFor={name}> Email:{label}</label>
         <input id={name} {...rest} className={styles.emailinput} placeholder="Enter Email here"></input>
@@ -63,7 +62,7 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
         <button type="button" className={styles.button} onClick={() => {
           getServerSideProps() // ig this works?
           if (getCurrentUser()) {
-            router.push('/instructor_view')
+            router.push('/creator_view')
           }
         }}>
           Submit
@@ -75,4 +74,4 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
   )
 }
 
-export default Main
+export default CreatorLoginMain

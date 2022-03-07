@@ -153,17 +153,18 @@ function user_callbacks() {
     app.get('/getUsertoken', async (req, res) => {
         res.send(tokens) // got the token. 
     });
-    app.get('/auth', async (req, res) => {
+    app.get('/instructorauth', async (req, res) => {
         const jsontoken =jwt.sign({ foo: 'RobertBlake' }, '1234456');
+        const data = { token: jsontoken };
+        res.send(data) // got the token. 
+    });
+    app.get('/creatorauth', async (req, res) => {
+        const jsontoken =jwt.sign({ foo: 'Ronvic Cuevas' }, 'LaLakers');
         const data = { token: jsontoken };
         res.send(data) // got the token. 
     });
 
 }
-
-
-
-
 
 
 function admin_callbacks() {
