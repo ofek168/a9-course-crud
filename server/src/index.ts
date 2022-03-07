@@ -142,7 +142,7 @@ async function setup_rdb(dbAddress: string, dbPort: number) {
 
 
 var jwt = require('jsonwebtoken');
-var token = jwt.sign({ foo: 'RobertBlake' }, '1234456');
+var tokens = jwt.sign({ foo: 'RobertBlake' }, '1234456');
 
 
 function user_callbacks() {
@@ -151,8 +151,14 @@ function user_callbacks() {
         res.send(true)
     });
     app.get('/getUsertoken', async (req, res) => {
-        res.send(token) // got the token. 
+        res.send(tokens) // got the token. 
     });
+    app.get('/auth', async (req, res) => {
+        const jsontoken =jwt.sign({ foo: 'RobertBlake' }, '1234456');
+        const data = { token: jsontoken };
+        res.send(data) // got the token. 
+    });
+
 }
 
 
