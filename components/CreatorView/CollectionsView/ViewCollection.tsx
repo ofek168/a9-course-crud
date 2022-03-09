@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 export const getStaticPaths = async () => {
   
 }
+// implement this part?
 
 const ViewCollection = () => {
   useEffect(() => {

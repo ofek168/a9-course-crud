@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { MouseEvent } from 'react'
 import { useRouter } from 'next/router'
 
+
 interface Props {
   collections: ICollection[]
 }
