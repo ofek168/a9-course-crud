@@ -6,12 +6,16 @@ const Main = () => {
     <main id={styles.container}>
       <h1>Instructor View</h1>
       <IOptions />
-      <button type="button" className={styles.button} onClick={() => {
-        router.push('/instructor_login')
-      }
-      }>
-        Back
-      </button>
+      <div>
+        <button type="button" className={styles.button} onClick={() => {
+          router.push('/instructor_login')
+        }
+        }>
+          Back
+        </button>
+
+      </div>
+
     </main>
   )
 }
