@@ -4,13 +4,14 @@ import React, { FC, InputHTMLAttributes } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import Axios, { AxiosResponse } from 'axios'
 import { json } from 'node:stream/consumers';
-
+import { verify } from 'jsonwebtoken';
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   label: string;
 }
 
 export async function getServerSideProps() {
+  const secret_key = "Creator Secret Key";
   const serverAddress = 'localhost'
   const serverPort = 4000
   // Fetch data from external API
@@ -18,8 +19,11 @@ export async function getServerSideProps() {
 
   let header = await Axios.get(`http://${serverAddress}:${serverPort}/creatorauth`)
 
+  
   const payload = header.data
   const userToken = payload.token
+  var decoded = verify(userToken, secret_key)
+  console.log(decoded)
   //this works, returns the payload
   if (userToken) {
     // router.push("/instructor_view")

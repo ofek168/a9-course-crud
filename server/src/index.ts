@@ -144,7 +144,7 @@ async function setup_rdb(dbAddress: string, dbPort: number) {
 var jwt = require('jsonwebtoken');
 var tokens = jwt.sign({ foo: 'RobertBlake' }, '1234456');
 const secret_key ="This is so secret";
-
+const secret_key_creator="Creator Secret Key";
 function user_callbacks() {
     app.get('/verifyUser', async (req, res) => {
         // TODO verify user data
@@ -160,7 +160,7 @@ function user_callbacks() {
         res.send(data) // got the token. 
     });
     app.get('/creatorauth', async (req, res) => {
-        const jsontoken =jwt.sign({ foo: 'Ronvic Cuevas' }, 'LaLakers');
+        const jsontoken =jwt.sign({ foo: 'Ronvic Cuevas' }, secret_key_creator);
         const data = { token: jsontoken };
         res.send(data) // got the token. 
     });
