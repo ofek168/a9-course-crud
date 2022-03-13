@@ -5,6 +5,7 @@ import { sample, sample2, coursesample } from '@components/Samples'
 import { ICollection } from 'interfaces'
 import CollectionsList from '@components/CreatorView/CollectionsView/CollectionsList';
 import router, { useRouter } from 'next/router'
+import ViewCollection from '@components/CreatorView/ViewCollection';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     name: string;
@@ -51,7 +52,7 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
 
             <div>
                 My Collection
-                <CollectionsList collections={[sample, sample2]}></CollectionsList>
+                <ViewCollection collections={[sample, sample2]}></ViewCollection>
                 <button type="button" className={styles.button} onClick={() => {
                     router.push('/')
                 }
