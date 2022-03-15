@@ -57,7 +57,6 @@ export const getCurrentUser = () => {
 
 const Main: FC<InputProps> = ({ name, label, ...rest }) => {
   const router = useRouter()
-
   return (
 
     <main id={styles.container}>
@@ -65,10 +64,10 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
       <h1>Instructor Login</h1>
       <div className={styles.input}>
         <label htmlFor={name}> Email:{label}</label>
-        <input id={name} {...rest} className={styles.emailinput} placeholder="Enter Email here"></input>
+        <input id={name} {...rest} className={styles.emailinput} placeholder="Enter Email here" name={name} value="RobertBlake@ucdavis.edu"></input>
         <br></br>
         <label htmlFor={name}>Password:{label}</label>
-        <input id={name} {...rest} className={styles.passwordinput} placeholder="Enter Password"></input>
+        <input id={name} {...rest} className={styles.passwordinput} placeholder="Enter Password"value="********"></input>
         <br></br>
         Show Password <input type="checkbox"></input>
         <br></br>

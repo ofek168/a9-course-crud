@@ -27,14 +27,15 @@ const IOptions = () => {
                         <p>SPAN 1 - Intro to Spanish A01</p>
                         <p>Enrolled: 20/20</p>
                         <p>Fall'84</p>
-                        <ViewCollection collections={[sample]}></ViewCollection>
+                       
+                       
                         <div className={styles.courseEdit}>
                             <button id={styles.btn}>View</button>
                             <button id={styles.btn}>Edit</button>
                             <button id={styles.btn}>Export</button>
                         </div>
                         <div className={styles.courseCollection}>
-
+                         <ViewCollection collections={[sample]}></ViewCollection>
                         </div>
                     </div>
 
@@ -42,14 +43,14 @@ const IOptions = () => {
                         <p>SPAN 1 - Intro to Spanish A01</p>
                         <p>Enrolled: 20/20</p>
                         <p>Fall'84</p>
-                        <ViewCollection collections={[sample2]}></ViewCollection>
+                       
                         <div className={styles.courseEdit}>
                             <button id={styles.btn}>View</button>
                             <button id={styles.btn}>Edit</button>
                             <button id={styles.btn}>Export</button>
                         </div>
                         <div className={styles.courseCollection}>
-
+                        <ViewCollection collections={[sample2]}></ViewCollection>
                         </div>
                     </div>
                     <div className={styles.coursesContent}>
