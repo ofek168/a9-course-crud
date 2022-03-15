@@ -64,7 +64,7 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
       <h1>Instructor Login</h1>
       <div className={styles.input}>
         <label htmlFor={name}> Email:{label}</label>
-        <input id={name} {...rest} className={styles.emailinput} placeholder="Enter Email here" name={name} value="RobertBlake@ucdavis.edu"></input>
+        <input id={name} {...rest} className={styles.emailinput} placeholder="Enter Email here" name={name} value="test@email.com"></input>
         <br></br>
         <label htmlFor={name}>Password:{label}</label>
         <input id={name} {...rest} className={styles.passwordinput} placeholder="Enter Password"value="********"></input>
@@ -82,6 +82,17 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
         }}>
           Submit
         </button>
+        <div>
+        <button type="button" className={styles.button} onClick={() => {
+          getServerSideProps() // ig this works?
+          if (getCurrentUser()) {
+            router.push('/')
+          }
+        }}>
+         Back
+        </button>
+        </div>
+        
       </div>
     </main>
   )

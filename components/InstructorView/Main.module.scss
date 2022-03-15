@@ -23,3 +23,10 @@
     cursor: pointer;
     text-align: center;
   }
+  .mydiv{
+    flex-direction: row;
+    align-self: start;
+    flex-direction:flex-start;
+    margin-left: 5em;
+    margin-bottom: 5em;
+  }

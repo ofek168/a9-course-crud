@@ -5,16 +5,24 @@ import Canvas from './Canvas/Canvas'
 import Link from 'next/link'
 import CollectionsList from '@components/CreatorView/CollectionsView/CollectionsList'
 import { sample, sample2 } from '@components/Samples'
-import { ICollection, IVocab } from 'interfaces'
+import { ICollection, ICourse, IVocab } from 'interfaces'
 import { useRouter } from 'next/router'
 import { MouseEvent } from 'react'
 import ViewCollection from '@components/CreatorView/ViewCollection'
+import InstructorCourse from './Icourses'
+import { coursesample, coursesample2 } from '../Samples/Icourseuser';
+
+
 
 const IOptions = () => {
     const router = useRouter()
     return (
 
         <div id={styles.I_container}>
+
+           
+
+
             <a className={styles.box}>
                 <h2 className={styles.font}>Your Courses</h2>
                 <div className={styles.showCourses}>
@@ -24,48 +32,50 @@ const IOptions = () => {
 
                 <div className={styles.coursesBox}>
                     <div className={styles.coursesContent}>
-                        <p>SPAN 1 - Intro to Spanish A01</p>
+                    <InstructorCourse courses={[coursesample]}></InstructorCourse>
+                        {/* <p>SPAN 1 - Intro to Spanish A01</p> */}
                         <p>Enrolled: 20/20</p>
-                        <p>Fall'84</p>
-                       
-                       
+                        <p>Fall 2023</p>
+
+
                         <div className={styles.courseEdit}>
                             <button id={styles.btn}>View</button>
                             <button id={styles.btn}>Edit</button>
                             <button id={styles.btn}>Export</button>
                         </div>
                         <div className={styles.courseCollection}>
-                         <ViewCollection collections={[sample]}></ViewCollection>
+                            <ViewCollection collections={[sample]}></ViewCollection>
                         </div>
                     </div>
 
                     <div className={styles.coursesContent}>
-                        <p>SPAN 1 - Intro to Spanish A01</p>
+                    <InstructorCourse courses={[coursesample2]}></InstructorCourse>
                         <p>Enrolled: 20/20</p>
-                        <p>Fall'84</p>
-                       
-                        <div className={styles.courseEdit}>
-                            <button id={styles.btn}>View</button>
-                            <button id={styles.btn}>Edit</button>
-                            <button id={styles.btn}>Export</button>
-                        </div>
-                        <div className={styles.courseCollection}>
-                        <ViewCollection collections={[sample2]}></ViewCollection>
-                        </div>
-                    </div>
-                    <div className={styles.coursesContent}>
-                        <p>SPAN 1 - Intro to Spanish A01</p>
-                        <p>Enrolled: 20/20</p>
-                        <p>Fall'84</p>
-                        <div className={styles.courseEdit}>
-                            <button id={styles.btn}>View</button>
-                            <button id={styles.btn}>Edit</button>
-                            <button id={styles.btn}>Export</button>
-                        </div>
-                        <div className={styles.courseCollection}>
+                        <p>Fall 2023</p>
 
+                        <div className={styles.courseEdit}>
+                            <button id={styles.btn}>View</button>
+                            <button id={styles.btn}>Edit</button>
+                            <button id={styles.btn}>Export</button>
+                        </div>
+                        <div className={styles.courseCollection}>
+                            <ViewCollection collections={[sample2]}></ViewCollection>
                         </div>
                     </div>
+
+                    {/* <div className={styles.coursesContent}>
+                    <InstructorCourse courses={[coursesample]}></InstructorCourse>
+                        <p>Enrolled: 20/20</p>
+                        <p>Fall'84</p>
+                        <div className={styles.courseEdit}>
+                            <button id={styles.btn}>View</button>
+                            <button id={styles.btn}>Edit</button>
+                            <button id={styles.btn}>Export</button>
+                        </div>
+                        <div className={styles.courseCollection}>
+                            
+                        </div>
+                    </div> */}
                 </div>
             </a>
             <div className={styles.box1}>

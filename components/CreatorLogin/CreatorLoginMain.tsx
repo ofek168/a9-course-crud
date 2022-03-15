@@ -53,10 +53,10 @@ const CreatorLoginMain: FC<InputProps> = ({ name, label, ...rest }) => {
       <h1>Creator Login</h1>
       <div className={styles.input}>
         <label htmlFor={name}> Email:{label}</label>
-        <input id={name} {...rest} className={styles.emailinput} placeholder="Enter Email here"></input>
+        <input id={name} {...rest} className={styles.emailinput} placeholder="Enter Email here" value="admin@ucdavis.edu"></input>
         <br></br>
         <label htmlFor={name}>Password:{label}</label>
-        <input id={name} {...rest} className={styles.passwordinput} placeholder="Enter Password"></input>
+        <input id={name} {...rest} className={styles.passwordinput} placeholder="Enter Password"value="********"></input>
         <br></br>
         Show Password <input type="checkbox"></input>
         <br></br>
@@ -71,7 +71,14 @@ const CreatorLoginMain: FC<InputProps> = ({ name, label, ...rest }) => {
         }}>
           Submit
         </button>
-
+        <button type="button" className={styles.button} onClick={() => {
+          getServerSideProps() // ig this works?
+          if (getCurrentUser()) {
+            router.push('/')
+          }
+        }}>
+         Back
+        </button>
 
       </div>
     </main>

@@ -5,8 +5,7 @@ const Main = () => {
   return (
     <main id={styles.container}>
       <h1>Instructor View</h1>
-      <IOptions />
-      <div>
+      <div className={styles.mydiv}>
         <button type="button" className={styles.button} onClick={() => {
           router.push('/instructor_login')
         }
@@ -15,6 +14,8 @@ const Main = () => {
         </button>
 
       </div>
+      <IOptions />
+
 
     </main>
   )

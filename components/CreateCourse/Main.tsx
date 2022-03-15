@@ -6,6 +6,7 @@ import { ICollection } from 'interfaces'
 import CollectionsList from '@components/CreatorView/CollectionsView/CollectionsList';
 import router, { useRouter } from 'next/router'
 import ViewCollection from '@components/CreatorView/ViewCollection';
+import InstructorCourse from '@components/InstructorView/Icourses';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     name: string;
@@ -65,6 +66,7 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
                 }>
                     Back
                 </button>
+               <InstructorCourse courses={[coursesample]}></InstructorCourse>
             </div>
 
         </main>
