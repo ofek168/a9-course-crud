@@ -67,14 +67,24 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
         <input id={name} {...rest} className={styles.emailinput} placeholder="Enter Email here" name={name} value="test@email.com"></input>
         <br></br>
         <label htmlFor={name}>Password:{label}</label>
-        <input id={name} {...rest} className={styles.passwordinput} placeholder="Enter Password"value="********"></input>
+        <input id={name} {...rest} className={styles.passwordinput} placeholder="Enter Password" value="********"></input>
         <br></br>
         Show Password <input type="checkbox"></input>
         <br></br>
         <br></br>
         <br></br>
         <br></br>
+
+        <div className={styles.box}>
         <button type="button" className={styles.button} onClick={() => {
+            // ig this works?
+              router.push('/')
+          }}>
+            Back
+          </button>
+          </div>
+          <div className={styles.box}>
+          <button type="button" className={styles.button1} onClick={() => {
           getServerSideProps() // ig this works?
           if (getCurrentUser()) {
             router.push('/instructor_view')
@@ -82,17 +92,13 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
         }}>
           Submit
         </button>
-        <div>
-        <button type="button" className={styles.button} onClick={() => {
-          getServerSideProps() // ig this works?
-          if (getCurrentUser()) {
-            router.push('/')
-          }
-        }}>
-         Back
-        </button>
         </div>
         
+       
+
+        <br></br>
+       
+
       </div>
     </main>
   )

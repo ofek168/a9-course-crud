@@ -1,14 +1,19 @@
 .box{
+    display: flex;
     position: relative;
     top:5vh;
     right:29vh;
     display: flex;
     flex-wrap: wrap;
     // align-items: 
-    background-color: #ffffff;
+    background-color: #04AA6D;
+    padding: 14px 28px;
     width: 15vh;
+    color: white;
     text-decoration: none;
-
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
     > h2 {
       font-size: 2.50rem;
       margin: 15px 0;
@@ -17,6 +22,18 @@
         text-decoration: none;
       }
 }
+.button{
+  display: flex;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
 .a{
     text-decoration: none;
+    background-color: red;
 }

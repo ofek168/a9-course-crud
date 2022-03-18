@@ -79,7 +79,7 @@ const IOptions = () => {
                 </div>
             </a>
             <div className={styles.box1}>
-                <h2 className={styles.font}>Tools</h2>
+                <h2 className={styles.fonts}>Tools</h2>
 
                 <br></br>
                 <div id={styles.box2}>

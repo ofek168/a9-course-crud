@@ -53,7 +53,7 @@ const CreatorLoginMain: FC<InputProps> = ({ name, label, ...rest }) => {
       <h1>Creator Login</h1>
       <div className={styles.input}>
         <label htmlFor={name}> Email:{label}</label>
-        <input id={name} {...rest} className={styles.emailinput} placeholder="Enter Email here" value="admin@ucdavis.edu"></input>
+        <input id={name} {...rest} className={styles.emailinput} placeholder="Enter Email here" value="test@email.com"></input>
         <br></br>
         <label htmlFor={name}>Password:{label}</label>
         <input id={name} {...rest} className={styles.passwordinput} placeholder="Enter Password"value="********"></input>
@@ -63,14 +63,9 @@ const CreatorLoginMain: FC<InputProps> = ({ name, label, ...rest }) => {
         <br></br>
         <br></br>
         <br></br>
-        <button type="button" className={styles.button} onClick={() => {
-          getServerSideProps() // ig this works?
-          if (getCurrentUser()) {
-            router.push('/creator_view')
-          }
-        }}>
-          Submit
-        </button>
+        <div>
+        </div>
+        <div className={styles.box}>
         <button type="button" className={styles.button} onClick={() => {
           getServerSideProps() // ig this works?
           if (getCurrentUser()) {
@@ -79,7 +74,21 @@ const CreatorLoginMain: FC<InputProps> = ({ name, label, ...rest }) => {
         }}>
          Back
         </button>
+        </div>
 
+        <div className={styles.box}>
+        <button type="button" className={styles.button1} onClick={() => {
+          getServerSideProps() // ig this works?
+          if (getCurrentUser()) {
+            router.push('/creator_view')
+          }
+        }}>
+          Submit
+        </button>
+        </div>
+        
+
+       
       </div>
     </main>
   )
