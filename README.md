@@ -1,4 +1,4 @@
-# a7 Frontend
+# a7-front-end
 
 
 ## How to run locally
