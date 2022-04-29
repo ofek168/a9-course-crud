@@ -1,4 +1,4 @@
-# a6 Login
+# a7 Frontend
 
 
 ## How to run locally
