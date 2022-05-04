@@ -1,19 +1,19 @@
 .box{
     display: flex;
     position: relative;
-    top:5vh;
+    top:3vh;
     right:29vh;
     display: flex;
     flex-wrap: wrap;
     // align-items: 
     background-color: #04AA6D;
     padding: 14px 28px;
-    width: 15vh;
+    width: 100%;
     color: white;
     text-decoration: none;
     flex-direction: column;
     justify-content: center;
-    margin-left: 100px;
+    margin-left: 20px;
     > h2 {
       font-size: 2.50rem;
       margin: 15px 0;

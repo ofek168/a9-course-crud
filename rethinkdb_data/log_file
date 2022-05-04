@@ -1,0 +1,144 @@
+2022-04-29T17:19:40.528765462 0.018061s notice: Recursively removing directory /home/ofek/Desktop/a7-front-end/rethinkdb_data/tmp
+2022-04-29T17:19:40.530932505 0.020224s notice: Initializing directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-04-29T17:19:40.531001578 0.020293s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/ofek/Desktop/a7-front-end/rethinkdb_data' did not already exist or is empty.)
+2022-04-29T17:19:40.531031933 0.020323s notice: Running rethinkdb 2.4.2 (GCC 5.4.0)...
+2022-04-29T17:19:40.533449891 0.022743s notice: Running on Linux 5.13.0-40-generic x86_64
+2022-04-29T17:19:40.533573879 0.022865s notice: Loading data from directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-04-29T17:19:40.554546452 0.043838s info: Automatically using cache size of 100 MB
+2022-04-29T17:19:40.554721641 0.044013s warn: Cache size does not leave much memory for server and query overhead (available memory: 789 MB).
+2022-04-29T17:19:40.554724992 0.044016s warn: Cache size is very low and may impact performance.
+2022-04-29T17:19:40.555201621 0.044493s notice: Listening for intracluster connections on port 29015
+2022-04-29T17:19:40.559754856 0.049046s notice: Listening for client driver connections on port 28015
+2022-04-29T17:19:40.559883281 0.049174s notice: Listening for administrative HTTP connections on port 8080
+2022-04-29T17:19:40.559887388 0.049179s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-04-29T17:19:40.559890819 0.049182s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-04-29T17:19:40.559894282 0.049185s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-04-29T17:19:40.559898009 0.049189s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-04-29T17:19:40.559901342 0.049192s notice: Server ready, "ofek_VirtualBox_71a" 3e1ad12e-0e0e-4dd9-ba6c-2b30da4a09f7
+2022-04-29T17:56:01.849975844 0.014576s notice: Running rethinkdb 2.4.2 (GCC 5.4.0)...
+2022-04-29T17:56:01.853180393 0.017781s notice: Running on Linux 5.13.0-40-generic x86_64
+2022-04-29T17:56:01.853251758 0.017851s notice: Loading data from directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-04-29T17:56:01.867698060 0.032298s info: Automatically using cache size of 100 MB
+2022-04-29T17:56:01.868505759 0.033105s warn: Cache size does not leave much memory for server and query overhead (available memory: 711 MB).
+2022-04-29T17:56:01.868510366 0.033110s warn: Cache size is very low and may impact performance.
+2022-04-29T17:56:01.871222053 0.035822s notice: Listening for intracluster connections on port 29015
+2022-04-29T17:56:01.879011109 0.043611s notice: Listening for client driver connections on port 28015
+2022-04-29T17:56:01.879263863 0.043863s notice: Listening for administrative HTTP connections on port 8080
+2022-04-29T17:56:01.879268429 0.043868s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-04-29T17:56:01.879273470 0.043873s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-04-29T17:56:01.879311280 0.043911s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-04-29T17:56:01.879317680 0.043917s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-04-29T17:56:01.879321453 0.043921s notice: Server ready, "ofek_VirtualBox_71a" 3e1ad12e-0e0e-4dd9-ba6c-2b30da4a09f7
+2022-04-29T17:59:07.248921541 0.009562s notice: Running rethinkdb 2.4.2 (GCC 5.4.0)...
+2022-04-29T17:59:07.251161041 0.011802s notice: Running on Linux 5.13.0-40-generic x86_64
+2022-04-29T17:59:07.251257731 0.011898s notice: Loading data from directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-04-29T17:59:07.267470460 0.028111s info: Automatically using cache size of 100 MB
+2022-04-29T17:59:07.267691199 0.028331s warn: Cache size does not leave much memory for server and query overhead (available memory: 784 MB).
+2022-04-29T17:59:07.267695559 0.028336s warn: Cache size is very low and may impact performance.
+2022-04-29T17:59:07.268321402 0.028962s notice: Listening for intracluster connections on port 29015
+2022-04-29T17:59:07.270173793 0.030814s notice: Listening for client driver connections on port 28015
+2022-04-29T17:59:07.272983928 0.033624s notice: Listening for administrative HTTP connections on port 8080
+2022-04-29T17:59:07.272988414 0.033629s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-04-29T17:59:07.272992036 0.033632s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-04-29T17:59:07.272995584 0.033636s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-04-29T17:59:07.272999225 0.033639s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-04-29T17:59:07.273002848 0.033643s notice: Server ready, "ofek_VirtualBox_71a" 3e1ad12e-0e0e-4dd9-ba6c-2b30da4a09f7
+2022-04-29T18:04:52.772565653 0.004798s notice: Running rethinkdb 2.4.2 (GCC 5.4.0)...
+2022-04-29T18:04:52.776282629 0.008515s notice: Running on Linux 5.13.0-40-generic x86_64
+2022-04-29T18:04:52.776342360 0.008574s notice: Loading data from directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-04-29T18:04:52.791494799 0.023727s info: Automatically using cache size of 100 MB
+2022-04-29T18:04:52.791650491 0.023882s warn: Cache size does not leave much memory for server and query overhead (available memory: 895 MB).
+2022-04-29T18:04:52.791653720 0.023886s warn: Cache size is very low and may impact performance.
+2022-04-29T18:04:52.792044562 0.024276s notice: Listening for intracluster connections on port 29015
+2022-04-29T18:04:52.798028445 0.030260s notice: Listening for client driver connections on port 28015
+2022-04-29T18:04:52.798205391 0.030437s notice: Listening for administrative HTTP connections on port 8080
+2022-04-29T18:04:52.798210268 0.030442s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-04-29T18:04:52.798215185 0.030447s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-04-29T18:04:52.798219071 0.030451s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-04-29T18:04:52.798223010 0.030455s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-04-29T18:04:52.798226520 0.030458s notice: Server ready, "ofek_VirtualBox_71a" 3e1ad12e-0e0e-4dd9-ba6c-2b30da4a09f7
+2022-04-29T18:14:30.793794612 0.003950s notice: Running rethinkdb 2.4.2 (GCC 5.4.0)...
+2022-04-29T18:14:30.796809532 0.006965s notice: Running on Linux 5.13.0-40-generic x86_64
+2022-04-29T18:14:30.796875828 0.007031s notice: Loading data from directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-04-29T18:14:30.807689021 0.017844s info: Automatically using cache size of 100 MB
+2022-04-29T18:14:30.807840235 0.017995s warn: Cache size does not leave much memory for server and query overhead (available memory: 678 MB).
+2022-04-29T18:14:30.807843510 0.017998s warn: Cache size is very low and may impact performance.
+2022-04-29T18:14:30.809056642 0.019212s notice: Listening for intracluster connections on port 29015
+2022-04-29T18:14:30.813078543 0.023234s notice: Listening for client driver connections on port 28015
+2022-04-29T18:14:30.813231898 0.023387s notice: Listening for administrative HTTP connections on port 8080
+2022-04-29T18:14:30.813235949 0.023391s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-04-29T18:14:30.813239390 0.023394s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-04-29T18:14:30.813242755 0.023398s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-04-29T18:14:30.813246229 0.023401s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-04-29T18:14:30.813251361 0.023406s notice: Server ready, "ofek_VirtualBox_71a" 3e1ad12e-0e0e-4dd9-ba6c-2b30da4a09f7
+2022-04-29T18:19:17.240500358 0.008178s notice: Running rethinkdb 2.4.2 (GCC 5.4.0)...
+2022-04-29T18:19:17.249700345 0.017379s notice: Running on Linux 5.13.0-40-generic x86_64
+2022-04-29T18:19:17.249798027 0.017476s notice: Loading data from directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-04-29T18:19:17.265668284 0.033346s info: Automatically using cache size of 100 MB
+2022-04-29T18:19:17.266539659 0.034217s warn: Cache size does not leave much memory for server and query overhead (available memory: 961 MB).
+2022-04-29T18:19:17.266544362 0.034222s warn: Cache size is very low and may impact performance.
+2022-04-29T18:19:17.267044997 0.034723s notice: Listening for intracluster connections on port 29015
+2022-04-29T18:19:17.271218697 0.038896s notice: Listening for client driver connections on port 28015
+2022-04-29T18:19:17.271345806 0.039023s notice: Listening for administrative HTTP connections on port 8080
+2022-04-29T18:19:17.271349585 0.039027s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-04-29T18:19:17.271353532 0.039031s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-04-29T18:19:17.271357608 0.039035s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-04-29T18:19:17.271361146 0.039039s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-04-29T18:19:17.271364842 0.039042s notice: Server ready, "ofek_VirtualBox_71a" 3e1ad12e-0e0e-4dd9-ba6c-2b30da4a09f7
+2022-04-30T12:58:08.016570434 0.020310s notice: Running rethinkdb 2.4.2 (GCC 5.4.0)...
+2022-04-30T12:58:08.024768209 0.028509s notice: Running on Linux 5.13.0-40-generic x86_64
+2022-04-30T12:58:08.024850293 0.028590s notice: Loading data from directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-04-30T12:58:08.039651099 0.043391s info: Automatically using cache size of 100 MB
+2022-04-30T12:58:08.040161333 0.043901s warn: Cache size does not leave much memory for server and query overhead (available memory: 596 MB).
+2022-04-30T12:58:08.040165459 0.043905s warn: Cache size is very low and may impact performance.
+2022-04-30T12:58:08.042558124 0.046298s notice: Listening for intracluster connections on port 29015
+2022-04-30T12:58:08.048612337 0.052352s notice: Listening for client driver connections on port 28015
+2022-04-30T12:58:08.048746861 0.052487s notice: Listening for administrative HTTP connections on port 8080
+2022-04-30T12:58:08.048751241 0.052491s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-04-30T12:58:08.048754833 0.052494s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-04-30T12:58:08.048758533 0.052498s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-04-30T12:58:08.048762026 0.052502s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-04-30T12:58:08.048765623 0.052505s notice: Server ready, "ofek_VirtualBox_71a" 3e1ad12e-0e0e-4dd9-ba6c-2b30da4a09f7
+2022-04-30T12:58:30.774256345 0.007478s notice: Running rethinkdb 2.4.2 (GCC 5.4.0)...
+2022-04-30T12:58:30.777292029 0.010515s notice: Running on Linux 5.13.0-40-generic x86_64
+2022-04-30T12:58:30.777364557 0.010586s notice: Loading data from directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-04-30T12:58:30.787940277 0.021162s info: Automatically using cache size of 100 MB
+2022-04-30T12:58:30.788083314 0.021305s warn: Cache size does not leave much memory for server and query overhead (available memory: 646 MB).
+2022-04-30T12:58:30.788086669 0.021308s warn: Cache size is very low and may impact performance.
+2022-04-30T12:58:30.788463166 0.021685s notice: Listening for intracluster connections on port 29015
+2022-04-30T12:58:30.792513824 0.025736s notice: Listening for client driver connections on port 28015
+2022-04-30T12:58:30.792694078 0.025916s notice: Listening for administrative HTTP connections on port 8080
+2022-04-30T12:58:30.792698532 0.025920s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-04-30T12:58:30.792702420 0.025924s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-04-30T12:58:30.792705984 0.025928s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-04-30T12:58:30.792711193 0.025933s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-04-30T12:58:30.792715752 0.025938s notice: Server ready, "ofek_VirtualBox_71a" 3e1ad12e-0e0e-4dd9-ba6c-2b30da4a09f7
+2022-04-30T14:08:30.846780620 4200.080003s warn: RethinkDB has been accessing a lot of swap memory in the past ten minutes. This may impact performace.
+2022-04-30T17:57:06.584315143 0.019333s notice: Running rethinkdb 2.4.2 (GCC 5.4.0)...
+2022-04-30T17:57:06.588118047 0.023137s notice: Running on Linux 5.13.0-40-generic x86_64
+2022-04-30T17:57:06.588192744 0.023211s notice: Loading data from directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-04-30T17:57:06.606982162 0.042000s info: Automatically using cache size of 100 MB
+2022-04-30T17:57:06.607773847 0.042792s warn: Cache size does not leave much memory for server and query overhead (available memory: 748 MB).
+2022-04-30T17:57:06.607777879 0.042796s warn: Cache size is very low and may impact performance.
+2022-04-30T17:57:06.610763440 0.045782s notice: Listening for intracluster connections on port 29015
+2022-04-30T17:57:06.617612477 0.052631s notice: Listening for client driver connections on port 28015
+2022-04-30T17:57:06.617749594 0.052768s notice: Listening for administrative HTTP connections on port 8080
+2022-04-30T17:57:06.617753645 0.052772s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-04-30T17:57:06.617757018 0.052775s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-04-30T17:57:06.617760343 0.052778s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-04-30T17:57:06.617763881 0.052782s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-04-30T17:57:06.617767487 0.052786s notice: Server ready, "ofek_VirtualBox_71a" 3e1ad12e-0e0e-4dd9-ba6c-2b30da4a09f7
+2022-05-04T14:15:47.304804448 0.024648s notice: Running rethinkdb 2.4.2 (GCC 5.4.0)...
+2022-05-04T14:15:47.309180914 0.029026s notice: Running on Linux 5.13.0-40-generic x86_64
+2022-05-04T14:15:47.309261557 0.029105s notice: Loading data from directory /home/ofek/Desktop/a7-front-end/rethinkdb_data
+2022-05-04T14:15:47.326057724 0.045902s info: Automatically using cache size of 100 MB
+2022-05-04T14:15:47.326633790 0.046478s warn: Cache size does not leave much memory for server and query overhead (available memory: 477 MB).
+2022-05-04T14:15:47.326637783 0.046482s warn: Cache size is very low and may impact performance.
+2022-05-04T14:15:47.328968574 0.048812s notice: Listening for intracluster connections on port 29015
+2022-05-04T14:15:47.335892915 0.055737s notice: Listening for client driver connections on port 28015
+2022-05-04T14:15:47.336025598 0.055869s notice: Listening for administrative HTTP connections on port 8080
+2022-05-04T14:15:47.336029668 0.055873s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-05-04T14:15:47.336032914 0.055877s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-05-04T14:15:47.336036240 0.055880s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-05-04T14:15:47.336039541 0.055883s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-05-04T14:15:47.336042958 0.055887s notice: Server ready, "ofek_VirtualBox_71a" 3e1ad12e-0e0e-4dd9-ba6c-2b30da4a09f7
