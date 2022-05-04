@@ -1,8 +1,15 @@
 .input{
-    background-color: #44CCFF;
-    margin-bottom: 2em;
+    border-radius: 5px;
 
-  
+  }
+
+  #inputs{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    justify-content:space-between;
+    margin-top:5px;
+    margin-bottom:5px;
   }
 
   .button{
@@ -15,4 +22,63 @@
     font-size: 16px;
     cursor: pointer;
     text-align: center;
+  }
+
+  .instructorCourse{
+    display:flex;
+    justify-content: center;
+  }
+
+  .title{
+    font-size: 5rem;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #44CCFF;
+
+    > label {
+      display: flex;
+      width:100px;
+      text-align: right;
+    }
+  }
+  
+  .courseInfoBox{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: red;
+    margin-right:3%;
+  }
+
+  .courseTimeBox{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    background-color: green;
+
+    margin-left: 3%;
+    margin-top: 20px;
+
+  }
+
+  .courseBoxWrapper{
+    display: flex;
+    background-color: purple;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .collectionsBox{
+    display: flex;
+    justify-content: center;
   }
