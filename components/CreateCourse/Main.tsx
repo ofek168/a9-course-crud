@@ -14,45 +14,55 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 const Main: FC<InputProps> = ({ name, label, ...rest }) => {
     return (
-        <main>
-            <h1>Create New Course</h1>
-            <section>
-                <h2>Quarter/Semester</h2>
-                <select>
-                    <option>Fall</option>
-                    <option>Winter</option>
-                    <option>Spring</option>
-                </select>
-            </section>
-
-
-            <section>
-                <h2>Year</h2>
-                <select>
-                    <option>2022</option>
-                    <option>2023</option>
-                    <option>2024</option>
-                </select>
-            </section>
-            <div>
-                <label htmlFor={name}> Course Name:{label}</label>
-                <input id={name} {...rest} className={styles.input} placeholder="Type Something..." ></input>
-                <br></br>
-                <label htmlFor={name}> Maximum Enrolled:{label}</label>
-                <input id={name} {...rest} className={styles.input} placeholder="Type Something..." ></input>
-                <br></br>
-                <label htmlFor={name}> Class Time:{label}</label>
-                <input id={name} {...rest} className={styles.input} placeholder="Type Something..." ></input>
-                <br></br>
-                <section>
-                    Location: <select><option>In-Person</option><option>Zoom</option></select>
-                </section>
-                <label htmlFor={name}> Enter Location/Zoom Link Here:{label}</label>
-                <input id={name} {...rest} className={styles.input} placeholder="Type Something..." ></input>
+        <main className = {styles.container}>
+            <h1 className = {styles.title} >Create New Course</h1>
+            <div className = {styles.courseBoxWrapper}>
+                <div className = {styles.courseInfoBox}>
+                    <div id = {styles.inputs}>
+                        <label htmlFor={name}> Course Name:{label}</label>
+                        <input id={name} {...rest} className={styles.input} placeholder="Type Something..." ></input>
+                    </div>
+                    <div id = {styles.inputs}>
+                        <h2>Year</h2>
+                        <select>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                        </select>  
+                    </div>
+                    <div id = {styles.inputs}>
+                        <h2>Quarter/Semester</h2>
+                        <select>
+                            <option>Fall</option>
+                            <option>Winter</option>
+                            <option>Spring</option>
+                        </select>
+                    </div>
+                </div>
+                <div className = {styles.courseTimeBox}>
+                    <div id = {styles.inputs}>
+                        <label htmlFor={name}> Maximum Enrolled:{label}</label>
+                        <input id={name} {...rest} className={styles.input} placeholder="Type Something..." ></input>
+                    </div>
+                    <div id = {styles.inputs}>
+                        <label htmlFor={name}> Class Time:{label}</label>
+                        <input id={name} {...rest} className={styles.input} placeholder="Type Something..." ></input>
+                    </div>
+                    <div id = {styles.inputs}>
+                        <h2>Location</h2>
+                        <select>
+                            <option>In Person</option>
+                            <option>Zoom</option>
+                        </select>
+                    </div>
+                    <div id = {styles.inputs}>
+                        <label htmlFor={name}> Location/Zoom Link:{label}</label>
+                        <input id={name} {...rest} className={styles.input} placeholder="Type Something..." ></input>
+                    </div>
+                </div>
             </div>
-
+            <h1 className = {styles.title}>My Collection</h1>
             <div>
-                My Collection
                 <ViewCollection collections={[sample, sample2]}></ViewCollection>
                 <button type="button" className={styles.button} onClick={() => {
                     router.push('/')
@@ -66,9 +76,11 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
                 }>
                     Back
                 </button>
-               <InstructorCourse courses={[coursesample]}></InstructorCourse>
-            </div>
 
+            </div>
+            <div className = {styles.instructorCourse}>
+            <InstructorCourse courses={[coursesample]}></InstructorCourse>
+            </div>
         </main>
 
 
