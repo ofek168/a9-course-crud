@@ -1,4 +1,4 @@
-# a7-front-end
+# a8-full-stack
 
 
 ## How to run locally
