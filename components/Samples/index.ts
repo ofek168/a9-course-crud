@@ -58,6 +58,7 @@ export const sample2: ICollection = {
   ]
 }
 
+
 export const coursesample : ICourse = {
   name:"Spanish",
   catalog: "1",

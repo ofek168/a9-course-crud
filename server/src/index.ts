@@ -8,6 +8,7 @@ import { join } from 'path'
 
 import { createUUID, getVocab } from './node_app/helpers'
 import { ICollection, ICollection_lw, IVocab, IUser, ELanguage } from "./interfaces"
+import { ICourse, ICreator } from "interfaces"
 
 
 const serverAddress:any = 'localhost' // process.env.SERVER_ADDRESS
@@ -74,6 +75,9 @@ export async function init() {
         collection_callbacks()
         user_callbacks()
 
+        //  create function course_callbacks; line 69 call it there; app.get() inside this function
+        // hardcode course selection; create endpoint 'getcourses' 
+        // 
         
         app.post("/insert_cloud_item", upload.fields(fields), async (req, res) => {
             try {
@@ -349,6 +353,9 @@ function collection_callbacks() {
             lang: req.body.lang,
             name: req.body.name
         }
+
+
+        
     
         // rdb command
         let result: r.WriteResult
@@ -371,6 +378,105 @@ function collection_callbacks() {
         //   }
         // });
     })
+
+    const sample: ICollection = {
+        author: {
+          email: {
+            address: "alec@null.net"
+          },
+          id: "",
+          name: "Alec Atienza",
+          rank: 0
+        },
+        description: "a collection of Spanish vocab",
+        id: "random",
+        lang: 0,
+        name: "Spanish collection",
+        items: [
+          {
+            id: "a1",
+            lang: 1,
+            translation: "cat",
+            value: "el gato"
+          },
+          {
+            id: "a2",
+            lang: 1,
+            translation: "dog",
+            value: "el perro"
+          }
+        ]
+      }
+
+      const sample2: ICollection = {
+        author: {
+          email: {
+            address: "alec@null.net"
+          },
+          id: "",
+          name: "Alec Atienza",
+          rank: 0
+        },
+        description: "a collection of Spanish vocab",
+        id: "random2",
+        lang: 0,
+        name: "Spanish collection 2",
+        items: [
+          {
+            id: "b1",
+            lang: 1,
+            translation: "table",
+            value: "la mesa"
+          },
+          {
+            id: "b2",
+            lang: 1,
+            translation: "pencil",
+            value: "el lápiz"
+          }
+        ]
+      }
+
+      const coursesample: ICourse = {
+        name: "Spanish",
+        catalog: "1-Intro to Spanish A01",
+        collections: [sample],
+        id: "123456789",
+        creator:
+        {
+            collections: [sample],
+            name: "test",
+            email: {
+                address: "test@email.com"
+            },
+            rank: 0,
+            id: "123456789"
+        }
+    }
+
+    const coursesample2: ICourse = {
+        name: "Spanish",
+        catalog: "1-Intro to Spanish A02",
+        collections: [sample2],
+        id: "987654312",
+        creator:
+        {
+            collections: [sample2],
+            name: "test2",
+            email: {
+                address: "test2@email.com"
+            },
+            rank: 0,
+            id: "987654312"
+        }
+    }
+
+
+      app.get("/instructorview", async (req, res) => {
+          res.send(coursesample)
+          res.send(coursesample2)
+
+      })
 
     // [UPDATE] Existing Collection or Vocab_Item
     app.put("/update/:tableName/:uuid", async (req, res) => {

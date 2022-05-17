@@ -90,13 +90,10 @@ const IOptions = () => {
                     <h3 className={styles.font2}>Canvas</h3>
                     <Canvas />
                 </div>
-                <div id={styles.messageBox}>
-                    <h3 className={styles.font2}>Messages</h3>
-                    <div></div>
-                </div>
+               
 
             </div>
-
+            
 
 
         </div>
