@@ -8,7 +8,7 @@ import { sample, sample2 } from '@components/Samples'
 import { ICollection, ICourse, IVocab } from 'interfaces'
 import { useRouter } from 'next/router'
 import { MouseEvent } from 'react'
-import ViewCollection from '@components/CreatorView/ViewCollection'
+import {ViewCollection, ViewCollection_2} from '@components/CreatorView/ViewCollection'
 import InstructorCourse from './Icourses'
 import { coursesample, coursesample2 } from '../Samples/Icourseuser';
 
@@ -43,7 +43,7 @@ const IOptions = () => {
                         </div>
                             <div className={styles.outer}>
                                 <div className={styles.inner}>
-                                   <ViewCollection collections={[sample]}></ViewCollection>
+                                   <ViewCollection_2 collections={[sample]}></ViewCollection_2>
                                 </div>
                             </div>
                     </div>
@@ -59,8 +59,8 @@ const IOptions = () => {
                             <button id={styles.btn}>Export</button>
                         </div>
                         <div className={styles.outer}>
-                            <div className={styles.inner}>
-                               <ViewCollection collections={[sample2]}></ViewCollection> 
+                            <div className={styles.inner}>  
+                               <ViewCollection_2 collections={[sample2]}></ViewCollection_2> 
                             </div>
                         </div>
                     </div>

@@ -72,6 +72,57 @@ const Collection = (col: ICollection) => {
   )
 }
 
+const Extra_Collection = (col: ICollection) => {
+  const router = useRouter()
+
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+    localStorage.clear()
+    const data = {
+      name: col.name,
+      lang: col.lang,
+      authorName: col.author.name,
+      authorEmail: col.author.email.address,
+      items: col.items,
+      description: col.description,
+      id: col.id ?? undefined
+    }
+    localStorage.setItem("state", JSON.stringify(data))
+
+    router.push(`/add_collection?edit=true&collection=${col.id}`)
+  }
+
+  return (
+    <li key={col.id}>
+      <div className={styles.collection}>
+        <div>
+          <h6>{col.name}</h6>
+          <h4> Description: {col.description} </h4>
+          <h4>ID:  {col.id} </h4>
+          {/* <Link href={`/creator_view/collections/${col.id}`}>
+            <a><button>View</button></a>
+          </Link> */}
+        </div>
+        <div>
+          {col.items.map(Item)}
+        </div>
+      </div>
+    </li>
+  )
+}
+
+
+const ViewCollection_2 = ({ collections }: Props) => {
+  const router = useRouter()
+
+  return (
+
+    <ul id={styles.list}>
+      {collections.map(Extra_Collection)}
+    </ul>
+
+  )
+}
+
 const ViewCollection = ({ collections }: Props) => {
   const router = useRouter()
 
@@ -84,5 +135,4 @@ const ViewCollection = ({ collections }: Props) => {
   )
 }
 
-export default ViewCollection
-
+export {ViewCollection, ViewCollection_2}

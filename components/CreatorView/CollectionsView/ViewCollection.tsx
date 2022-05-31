@@ -20,3 +20,4 @@ const ViewCollection = () => {
 }
 
 export default ViewCollection
+
