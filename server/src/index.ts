@@ -437,6 +437,64 @@ function collection_callbacks() {
         ]
       }
 
+      const sample3: ICollection = {
+        author: {
+          email: {
+            address: "alec@null.net"
+          },
+          id: "",
+          name: "Alec Atienza",
+          rank: 0
+        },
+        description: "a collection of Spanish vocab",
+        id: "random3",
+        lang: 0,
+        name: "Spanish collection 3",
+        items: [
+          {
+            id: "b1",
+            lang: 1,
+            translation: "Library",
+            value: "Biblioteca"
+          },
+          {
+            id: "b2",
+            lang: 1,
+            translation: "Hello",
+            value: "Hola"
+          }
+        ]
+      }
+  
+      const sample4: ICollection = {
+        author: {
+          email: {
+            address: "alec@null.net"
+          },
+          id: "",
+          name: "Alec Atienza",
+          rank: 0
+        },
+        description: "a collection of Spanish vocab",
+        id: "random4",
+        lang: 0,
+        name: "Spanish collection 4",
+        items: [
+          {
+            id: "b1",
+            lang: 1,
+            translation: "Thank you",
+            value: "Gracias"
+          },
+          {
+            id: "b2",
+            lang: 1,
+            translation: "Of Course",
+            value: "Claro"
+          }
+        ]
+      }
+
       const coursesample: ICourse = {
         name: "Spanish",
         catalog: "1-Intro to Spanish A01",
@@ -471,12 +529,70 @@ function collection_callbacks() {
         }
     }
 
+    const coursesample3: ICourse = {
+      name: "Spanish 3",
+      catalog: "1-Intro to Spanish A02",
+      collections: [sample3,sample4],
+      id: "987654312",
+      creator:
+      {
+          collections: [sample3,sample4],
+          name: "test2",
+          email: {
+              address: "test2@email.com"
+          },
+          rank: 0,
+          id: "987654312"
+      }
+    }
 
-      app.get("/instructorview", async (req, res) => {
-          res.send(coursesample)
-          res.send(coursesample2)
+    const coursesample4: ICourse = {
+      name: "Spanish 4",
+      catalog: "1-Intro to Spanish A02",
+      collections: [sample3,sample4],
+      id: "987654312",
+      creator:
+      {
+          collections: [sample3,sample4],
+          name: "test2",
+          email: {
+              address: "test2@email.com"
+          },
+          rank: 0,
+          id: "987654312"
+      }
+    }
 
-      })
+
+    app.get("/instructorview", async (req, res) => {
+        res.send(coursesample)
+        res.send(coursesample2)
+
+    })
+
+    const collectionArray = [sample, sample2];
+    const courseArray = [coursesample,coursesample2,coursesample3,coursesample4];
+
+    app.put("/submitCourse", async (req,res) =>{
+      console.log("The server has recieved a put request from the web client");
+      console.log(req.body);
+      res.send("boop!"); //just send something back to client
+    });
+
+    app.get("/getCollections", async (req,res) =>{
+      console.log("The server has recieved a get request from the web client");
+      res.send(collectionArray); //just send something back to client
+  });
+
+  app.get("/getTemplates", async (req,res) =>{
+    console.log("The server recieved a getTemplate request!");
+    res.send(courseArray); //just send something back to client
+  });
+
+  app.put("/submitTemplate", async (req,res) =>{
+    console.log("The server has recieved the following template!");
+    console.log(req.body);
+  })
 
     // [UPDATE] Existing Collection or Vocab_Item
     app.put("/update/:tableName/:uuid", async (req, res) => {
