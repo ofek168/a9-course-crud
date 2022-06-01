@@ -26,6 +26,29 @@ interface Props {
   collections: ICollection[]
 }
 
+interface CollectionViewProp{
+  collections: ICollection[]
+  updateState: React.Dispatch<React.SetStateAction<ICollection[]>>
+}
+
+interface CollectionSelectProp{
+  serverCollections: ICollection[]
+  serverUpdateState: React.Dispatch<React.SetStateAction<ICollection[]>>
+  selectStates: ICollection[]
+  selectUpdateStates: React.Dispatch<React.SetStateAction<ICollection[]>>
+}
+
+interface TemplateSelectProp{
+  templates: ICourse[];
+  currentCollections: ICollection[]
+  setCurrentCollections: React.Dispatch<React.SetStateAction<ICollection[]>>
+  setButtonPopupTemplate: React.Dispatch<React.SetStateAction<boolean>>;
+  //confirmationPopup: boolean;
+  //setConfirmationPopup: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+
+
 const Item = (item: IVocab) => {
   return (
     <div className={styles.item} key={item.value}>
@@ -135,4 +158,111 @@ const ViewCollection = ({ collections }: Props) => {
   )
 }
 
-export {ViewCollection, ViewCollection_2}
+const ViewCollectionWithDelete = ({collections, updateState}: CollectionViewProp) => {
+  const router = useRouter();
+  return (
+    <ul id={styles.list}>
+      {collections.map((Collection) => {
+          return <div className={styles.tableNameContainer} >
+              <ViewCollection collections = {[Collection]}/>
+              <button className={styles.deleteTableButton} onClick={async (e) => {
+                  e.preventDefault();
+                  let index = collections.indexOf(Collection);
+                  if (index !== -1) {
+                    collections.splice(index, 1);
+                  }
+                  router.replace(router.asPath);
+              }}>❌</button>
+      </div>
+        }
+      )}
+    </ul>
+  )
+}
+
+const AddCollections = ({serverCollections,serverUpdateState,selectStates,selectUpdateStates}: CollectionSelectProp) => {
+  const router = useRouter();
+  return (
+    <ul id={styles.list}>
+      {
+      
+      serverCollections.map((Collection) => {
+          return <div className={styles.tableNameContainer} >
+          <ViewCollection collections = {[Collection]}/>
+          <div >
+              <button className={styles.deleteTableButton} onClick={async (e) => {
+                e.preventDefault();
+                let index = serverCollections.indexOf(Collection);
+                if (index !== -1) {
+                  serverCollections.splice(index, 1);
+                }
+                selectUpdateStates(selectStates.concat(Collection));
+                router.replace(router.asPath);
+                  
+              }}>✅</button>
+          </div>
+      </div>
+        }
+      )}
+    </ul>
+  )
+}
+
+const ViewTemplates = ({templates,currentCollections,setCurrentCollections,setButtonPopupTemplate}: TemplateSelectProp) => {
+  const router = useRouter();
+  return (
+    <ul id={styles.list}>
+      {
+      templates.map((Course) => {
+        const [confirmationPopup, setConfirmationPopup] = useState(false);
+          return <div className={styles.tableNameContainer} >
+            <div className = {styles.courseWrapper}>
+              <div id ={styles.title}>
+                {Course.name}
+                <button className={styles.deleteTableButton} onClick={async (e) => {
+                e.preventDefault();
+                setConfirmationPopup(true);
+                //setCurrentCollections(Course.collections);
+                //setButtonPopupTemplate(false);
+              }}>✅</button>
+
+              {confirmationPopup && (
+                  <ClickAwayListener onClickAway={() => setConfirmationPopup(true)}>
+                      <div className={styles.modal}>
+                          <div className={styles.modal_content}>
+                            <p>
+                            Are you sure you want to use {Course.name} as your template?
+                            </p>
+                            <button type="button" className={styles.button} onClick={() => {
+                              setCurrentCollections(Course.collections);
+                              setButtonPopupTemplate(false);
+                              setConfirmationPopup(false);
+                                }
+                                }>
+                                  Yes
+                            </button>
+
+                            <button type="button" className={styles.button} onClick={() => {
+                                setConfirmationPopup(false);
+                                }
+                                }>
+                                  No
+                            </button>
+                          </div>
+                      </div>
+                      
+                  </ClickAwayListener>
+                  
+              )}
+              </div>
+              {Course.collections.map(Collection)}
+            </div>
+              
+          </div>
+        }
+      )}
+    </ul>
+  )
+}
+
+export {ViewCollection, ViewCollection_2,ViewCollectionWithDelete,AddCollections,ViewTemplates}
