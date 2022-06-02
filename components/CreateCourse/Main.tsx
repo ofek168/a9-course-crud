@@ -78,11 +78,11 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
                     </div>
                 </div>
             </div>
-            <h1 className = {styles.title}>My Collection</h1>
+            <h1 className = {styles.title}>My Collection</h1> 
             <div>
                 <ViewCollectionWithDelete collections={currentCollections} updateState={setCurrentCollections}></ViewCollectionWithDelete>
 
-                <button type="button" className={styles.button} onClick={() => {
+                <button type="button" className={styles.button} onClick={() => { // change collections
                     Axios.get(`http://${HOST}:${PORT}/${GET_END_POINT}`).then( function (response){
                         console.log(response.data);
                         setServerCollections(response.data);

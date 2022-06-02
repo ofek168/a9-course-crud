@@ -20,9 +20,6 @@ const IOptions = () => {
 
         <div id={styles.I_container}> 
 
-           
-
-
             <a className={styles.box}>
                 <h2 className={styles.font}>Your Courses</h2>
 
@@ -38,7 +35,6 @@ const IOptions = () => {
                         <p>Fall 2023</p>
                         <div className={styles.courseEdit}>
                             <button id={styles.btn}>View</button>
-                            <button id={styles.btn}>Edit</button>
                             <button id={styles.btn}>Export</button>
                         </div>
                             <div className={styles.outer}>
@@ -55,7 +51,6 @@ const IOptions = () => {
 
                         <div className={styles.courseEdit}>
                             <button id={styles.btn}>View</button>
-                            <button id={styles.btn}>Edit</button>
                             <button id={styles.btn}>Export</button>
                         </div>
                         <div className={styles.outer}>

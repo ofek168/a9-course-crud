@@ -134,7 +134,7 @@ const Extra_Collection = (col: ICollection) => {
 }
 
 
-const ViewCollection_2 = ({ collections }: Props) => {
+const ViewCollection_2 = ({collections}: Props) => {
   const router = useRouter()
 
   return (
@@ -146,13 +146,16 @@ const ViewCollection_2 = ({ collections }: Props) => {
   )
 }
 
+
+
+
 const ViewCollection = ({ collections }: Props) => {
   const router = useRouter()
 
   return (
 
     <ul id={styles.list}>
-      {collections.map(Collection)}
+      {collections.map(Extra_Collection)}
     </ul>
 
   )
