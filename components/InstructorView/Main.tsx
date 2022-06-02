@@ -10,6 +10,7 @@ import Axios from 'axios';
 const PORT = '4000';
 const HOST = 'localhost'; // 'DOCKER_NODE_SERVICE'; // 'localhost'
 const GET_END_POINT = 'getCollections';
+const PUT_Collection_END_POINT = 'submit_Edited_Collections'; //requires endpoint for
 
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -43,7 +44,6 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
                         setServerCollections(response.data);
                         setSelectedCollections([]);
                         setButtonPopup(true);
-                        
                     });
                 }
                 }>
@@ -64,6 +64,9 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
                             setCurrentCollections(currentCollections.concat(selectedCollections));
                             setSelectedCollections([]);
                             setButtonPopup(false);
+                            {
+                            Axios.put(`http://${HOST}:${PORT}/${PUT_Collection_END_POINT}`,currentCollections); //send put request
+                            }
                                 }
                                 }>
                                     Submit

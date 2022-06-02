@@ -137,8 +137,10 @@ const Main: FC<InputProps> = ({ name, label, ...rest }) => {
                 }>
                     Start From Template
                 </button>
-                <button type="button" className={styles.button} onClick={() => {
+                <button type="button" className={styles.button} onClick={() => 
+                {
                     Axios.put(`http://${HOST}:${PORT}/${PUT_TEMPLATE_END_POINT}`,currentCollections);
+                    
                 }
                 }>
                     Submit Template

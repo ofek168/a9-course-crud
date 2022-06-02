@@ -579,6 +579,12 @@ function collection_callbacks() {
       res.send("boop!"); //just send something back to client
     });
 
+    app.put("/submit_Edited_Collections", async (req,res) =>{ 
+      console.log("The server has recieved a put request from the web client");
+      console.log(req.body);
+      res.send("boop!"); //just send something back to client
+    });
+
     app.get("/getCollections", async (req,res) =>{
       console.log("The server has recieved a get request from the web client");
       res.send(collectionArray); //just send something back to client
