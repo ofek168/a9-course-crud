@@ -580,7 +580,7 @@ function collection_callbacks() {
     });
 
     app.put("/submit_Edited_Collections", async (req,res) =>{ 
-      console.log("The server has recieved a put request from the web client");
+      console.log("The server has recieved a edited collection put request from the web client");
       console.log(req.body);
       res.send("boop!"); //just send something back to client
     });
